@@ -9,7 +9,15 @@
   "transport": "HTTPS",
   "method": "GET",
   "status": "SERVING",
-  "runtime_status": "DECLARED_NOT_LIVE",
+  "runtime_status": "LAUNCH_DECLARED_NOT_LIVE",
+  "mcp_model_server": {
+    "launch_id": "OURSELF-MCP-MODEL-LAUNCH-0001",
+    "transport": "STREAMABLE_HTTP",
+    "execution_repo": "situaedmilly/FLOWACTIONSELFWORK",
+    "launch_contract": "runtime/OURSELF-MCP-MODEL-SERVER-LAUNCH.json",
+    "process": "runtime/ourself-mcp-model-server.mjs",
+    "runtime_endpoint": null
+  },
   "ollama_endpoint": null,
   "authority": "OURSELF",
   "evidence": {
