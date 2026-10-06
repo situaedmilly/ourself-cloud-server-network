@@ -1,0 +1,21 @@
+services:
+  alchemyselfrver01:
+    image: ghcr.io/ggml-org/llama.cpp:server
+    container_name: alchemyselfrver01
+    restart: unless-stopped
+    ports:
+      - "${GENESIS_BIND_ADDRESS:-0.0.0.0}:${GENESIS_PORT:-8080}:8080"
+    volumes:
+      - ${GENESIS_MODEL_DIR:?GENESIS_MODEL_DIR is required}:/models:ro
+    environment:
+      LLAMA_ARG_MODEL: /models/${GENESIS_MODEL_FILE:?GENESIS_MODEL_FILE is required}
+      LLAMA_ARG_HOST: 0.0.0.0
+      LLAMA_ARG_PORT: 8080
+      LLAMA_ARG_CTX_SIZE: ${GENESIS_CTX_SIZE:-32768}
+    command:
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8080"
+      - --model
+      - /models/${GENESIS_MODEL_FILE:?GENESIS_MODEL_FILE is required}
