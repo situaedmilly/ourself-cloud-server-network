@@ -1,0 +1,21 @@
+{
+  "instance_id": "OURSELF-INSTANCE-0001",
+  "network_id": "OURSELF-CLOUD-SERVER-NETWORK",
+  "address_realm": "SELFVEREIGN-ADDRESSELF",
+  "execution_realm": "FLOWACTIONSELFWORK",
+  "cognition_realm": "Cognitive-Transmutation-Core",
+  "canonical_served_endpoint": "https://raw.githubusercontent.com/situaedmilly/ourself-cloud-server-network/main/instances/OURSELF-INSTANCE-0001/endpoint.json",
+  "endpoint_kind": "GITHUB_RAW_CONTENT",
+  "transport": "HTTPS",
+  "method": "GET",
+  "status": "SERVING",
+  "runtime_status": "DECLARED_NOT_LIVE",
+  "ollama_endpoint": null,
+  "authority": "OURSELF",
+  "evidence": {
+    "address_repo": "situaedmilly/SELFVEREIGN-ADDRESSELF",
+    "action_repo": "situaedmilly/FLOWACTIONSELFWORK",
+    "cognitive_core_repo": "situaedmilly/Cognitive-Transmutation-Core",
+    "network_repo": "situaedmilly/ourself-cloud-server-network"
+  }
+}
