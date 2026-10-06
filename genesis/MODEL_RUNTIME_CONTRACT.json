@@ -1,0 +1,18 @@
+{
+  "schema": "OURSELF-MODEL-RUNTIME-v0.1",
+  "instance_id": "ALCHEMYSELFRVER01",
+  "role": "GENESIS_MODEL_INFERENCE_ENDPOINT",
+  "authority": "OURSELF",
+  "engine": "llama.cpp",
+  "container_image": "ghcr.io/ggml-org/llama.cpp:server",
+  "artifact_format": "GGUF",
+  "model_file": "EXPLICIT_RUNTIME_BINDING_REQUIRED",
+  "model_sha256": "EXPLICIT_RUNTIME_BINDING_REQUIRED",
+  "storage_policy": "EXTERNAL_MODEL_DIRECTORY",
+  "network_policy": "PRIVATE_BIND_REQUIRED",
+  "api_surface": "/v1",
+  "health_endpoint": "/health",
+  "host_model_storage": "NOT_IN_GIT",
+  "huggingface_runtime_dependency": false,
+  "mac_model_copy_required": false
+}
