@@ -1,0 +1,34 @@
+{
+  "instance_id": "OURSELF-INSTANCE-0001",
+  "server_id": "OURSELF-SERVER-0001",
+  "runtime": "OLLAMA",
+  "status": "BINDING_REQUIRED",
+  "endpoint": null,
+  "port": 11434,
+  "protocol": "HTTP",
+  "health_check": "/api/version",
+  "models_check": "/api/tags",
+  "runtime_status": "DECLARED_NOT_LIVE",
+  "authority": "EXPLICIT_USER_EXECUTION_REQUEST",
+  "source_endpoint_artifact": "https://raw.githubusercontent.com/situaedmilly/ourself-core/main/runtime/endpoint.json",
+  "address_resolution": {
+    "source": "OURSELF-INSTANCE-0001 endpoint.json",
+    "canonical_endpoint": "https://raw.githubusercontent.com/situaedmilly/ourself-core/main/runtime/endpoint.json",
+    "ollama_endpoint_observed": false
+  },
+  "proof_required": [
+    "NETWORK_REACHABILITY",
+    "OLLAMA_API_RESPONSE",
+    "MODEL_RUNTIME_RESPONSE",
+    "INSTANCE_BINDING",
+    "THIRD_EYE_RECONTACT"
+  ],
+  "promotion_path": [
+    "DECLARED_NOT_LIVE",
+    "NETWORK_REACHABLE",
+    "OLLAMA_SERVING",
+    "MODEL_AVAILABLE",
+    "BOUND_TO_OURSELF-INSTANCE-0001",
+    "LIVE_COGNITION_SERVER"
+  ]
+}
