@@ -15,4 +15,6 @@ This repository is a peer to:
 
 It is not a submodule of either, and does not redefine their responsibilities.
 
-See `specifications/OURSELFCLOUDSERVERNETWORK-RUNTIME-SPEC-v0.md` for the current draft specification.
+See `specifications/OURSELFCLOUDSERVERNETWORK-RUNTIME-SPEC-v0.md` for the original draft specification.
+
+See `specifications/OURDATASELFBASE-CONTINUITY-ADAPTER-v1.md` for the additive OURDATASELFBASE continuity contract. It remains a draft: not ratified, implemented, or deployed.
