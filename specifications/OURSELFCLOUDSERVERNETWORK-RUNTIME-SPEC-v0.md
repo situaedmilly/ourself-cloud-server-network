@@ -413,3 +413,37 @@ promotion_boundary: NOT_CROSSED
 ```
 
 This document defines intended structure only. It does not authorize implementation, deployment, ratification, or promotion of any component described above.
+
+## ProtocolSELF-18 registry binding (additive projection)
+
+OURSELFCLOUDSERVERNETWORK consumes the OURSELFCOMM ProtocolSELF registry as
+protocol identity metadata. It does not originate authority, authorize service
+activation, or infer reachability from a registry entry.
+
+Source registry:
+- Repository: `situaedmilly/self-communication`
+- Branch: `feat/protocolself-18-registry-v0.1`
+- Path: `protocols/protocolself-18.v0.1.json`
+- SHA-256: `76a2a14c9bab0d0ded7ff05c80991141df53e9f1f15ec948443e0b950017508c`
+
+The registry contains 18 identities with conventional port/transport metadata.
+This specification-level binding does not implement transport adapters or
+change this repository's `implementation_status: NOT_IMPLEMENTED` or
+`deployment_status: NOT_DEPLOYED`.
+
+Required non-collapse:
+
+```text
+PROTOCOL_IDENTITY != NETWORK_SERVICE
+NETWORK_SERVICE != LISTENER
+LISTENER != ROUTE
+ROUTE != REACHABILITY
+REACHABILITY != AUTHORITY
+TRANSPORT != ADMISSION
+```
+
+No firewall, tunnel, DNS route, socket, daemon, credential, or inter-node
+connection is created by the registry projection. Each future adapter must
+carry endpoint identity, jurisdiction, transport security, credential custody,
+authority envelope, admission receipt, and observed delivery evidence.
+
