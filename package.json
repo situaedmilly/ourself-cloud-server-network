@@ -1,0 +1,9 @@
+{
+  "name": "ourself-cloud-server-network",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Fail-closed local runtime registry and evidence surface for OURSELF Cloud Server Network",
+  "scripts": { "start": "node runtime/server.mjs", "test": "node --test test/*.test.mjs" },
+  "engines": { "node": ">=22" }
+}
