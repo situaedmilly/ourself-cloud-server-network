@@ -1,20 +1,36 @@
-# ourself-cloud-server-network
+# OURSELF Cloud Server Network
 
-```
-class: SYSTEM_SPECIFICATION_REPOSITORY
-purpose: Governed continuity fabric for missions, runtimes, capabilities,
-         evidence, recovery, and execution across computational realms.
-status: INITIAL_DRAFT
-implementation_status: NOT_IMPLEMENTED
-```
+Governed continuity fabric for missions, runtimes, capabilities, evidence, recovery, and execution across computational realms.
 
-This repository is a peer to:
+## Runtime v0.1
 
-- `/Users/millysituated/RUORA/projects/agent-bridge` (Mission Kernel)
-- `/Users/millysituated/RUORA/systems/ourself-agent-bridge` (OURSELFAGENTBRIDGE control plane)
+This repository now contains an experimental, local-only observational runtime.
 
-It is not a submodule of either, and does not redefine their responsibilities.
+- GET /healthz: live process and governance-state report.
+- GET /v1/runtimes: probe the pinned loopback runtime registry and append an observation receipt.
+- GET /v1/receipts: read the append-only observation ledger.
+- POST /v1/missions, /v1/tasks, /v1/capabilities/resolve: fail closed with 403 AUTHORITY_ENVELOPE_REQUIRED.
 
-See `specifications/OURSELFCLOUDSERVERNETWORK-RUNTIME-SPEC-v0.md` for the original draft specification.
+The runtime binds only to 127.0.0.1:49330. Registry endpoints must also be loopback. No remote runtime discovery, arbitrary URL probing, execution dispatch, authority issuance, or promotion is implemented.
 
-See `specifications/OURDATASELFBASE-CONTINUITY-ADAPTER-v1.md` for the additive OURDATASELFBASE continuity contract. It remains a draft: not ratified, implemented, or deployed.
+## Governance boundary
+
+This runtime does not ratify the Cloud Server Network specification or create constitutional authority.
+
+- Ratification: NOT_GRANTED
+- Authority plane: UNBOUND
+- Mission plane: READ_ONLY
+- Execution plane: DISABLED
+- Deployment scope: LOCAL_DEVICE
+- Production readiness: NOT_CLAIMED
+
+The runtime is an operational diagnostic and evidence surface, not the complete governed continuity fabric.
+
+## Run
+
+Node.js 22 or newer. No third-party dependencies.
+
+    npm test
+    npm start
+    curl http://127.0.0.1:49330/healthz
+    curl http://127.0.0.1:49330/v1/runtimes

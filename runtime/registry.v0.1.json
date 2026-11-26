@@ -1,0 +1,12 @@
+{
+  "schema": "ourself.cloud-runtime-registry.v0.1",
+  "registry_id": "OURSELF-CLOUD-RUNTIME-REGISTRY-0001",
+  "status": "OBSERVATIONAL_ONLY",
+  "runtimes": [
+    {"runtime_id":"OURSELF-AGENT-BRIDGE-KERNEL","service":"ÆTHERNET Agent Bridge","base_url":"http://127.0.0.1:3002","health_path":"/health","network_boundary":"LOCAL_DEVICE","trust_level":"UNVERIFIED","authority_ceiling":"NONE"},
+    {"runtime_id":"SELFTELLIGENCE-MODEL-SERVER","service":"OURSELF MCP Model Server","base_url":"http://127.0.0.1:3001","health_path":"/health","network_boundary":"LOCAL_DEVICE","trust_level":"UNVERIFIED","authority_ceiling":"NONE"},
+    {"runtime_id":"OURSELF-GENESISD","service":"OURSELF Genesis daemon","base_url":"http://127.0.0.1:3010","health_path":"/health","network_boundary":"LOCAL_DEVICE","trust_level":"UNVERIFIED","authority_ceiling":"NONE"},
+    {"runtime_id":"AETHERBRIDGE-PIPEPORTAL","service":"ÆTHERBRIDGE PIPE|PORTAL","base_url":"http://127.0.0.1:49320","health_path":"/healthz","network_boundary":"LOCAL_DEVICE","trust_level":"UNVERIFIED","authority_ceiling":"NONE"},
+    {"runtime_id":"GBTSELF-ACTION-BRIDGE","service":"GBTSELF Action Bridge","base_url":"http://127.0.0.1:49321","health_path":"/health","network_boundary":"LOCAL_DEVICE","trust_level":"UNVERIFIED","authority_ceiling":"NONE"}
+  ]
+}
